@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body{background-color:#95A5A6 ;}
+
+.addTask{
+	padding: 30px 20px;
+	width: 90%;
+	display: flex;
+}
+
+.addTask > input[type="text"]{
+	width:100%;
+	height:3rem;
+	padding-left: 20px;
+	font-weight: 500;
+	border: 2px solid #d1d3d4;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.addTask input:focus{
+	outline: none;
+	border-color:#212121;
+  } 
+
+.addTask button{
+	width:20%;
+	min-width: 80px;
+	height: 3rem;
+	margin: 0 10px;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
+}
+
+.notCompleted, .Completed{
+	padding: 10px;
+	margin: 20px 0;
+}
+
+h1,h3{text-transform:uppercase;}
+
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+	margin: 10px;
+	flex: 50%
+}
+
+ol li{
+	width: 95%;
+	padding: 10px 20px;
+	margin: 8px 0px;
+	color:white;
+	background:#212121;
+	font-size: 22px;
+	counter-increment: my-counter;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	!box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+ol.Completed li{
+	background:#808080;
+}
+
+.flexbox{display: flex;
+		flex-direction:row;}
+
+@media screen and (max-width: 800px) {
+.flexbox {
+		flex-direction:column;
+	}
+}
+
+
+ol li::before{
+	content: counter(my-counter);
+	color:black;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background: white;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	margin-right: 0.25rem;
+	font-weight: bold;
+}
+
+li button{
+	float: right;
+	padding: 5px;
+	font-size: 20px;
+	line-height: 28px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+}
